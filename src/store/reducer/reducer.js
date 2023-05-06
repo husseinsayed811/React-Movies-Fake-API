@@ -7,7 +7,6 @@ const InitialState = {
 }
 
 export default function movReducer(state = InitialState, action) {
-    // let card = state.favourtmovise;
 
     switch (action.type) {
 

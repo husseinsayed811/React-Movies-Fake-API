@@ -2,34 +2,19 @@ import Card from 'react-bootstrap/Card';
 
 import React, { useEffect, useState } from 'react';
 
-// import axiosInstance from '../../axiosInstance/axiosInstance';
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import addmovise from '../../store/action/addmovies';
 import changeMovies from '../../store/action/moviesAction';
 
 const Movies = () => {
-
-    // const [movie, setmovie] = useState([]);
-    const [icon] = useState("fa-regular fa-heart");
     const favMovies = useSelector(state => state.favourites.favourtmovise)
 
     const [page, setpage] = useState(1)
     const urlToImage = "http://image.tmdb.org/t/p/w500/"
 
 
-    // useEffect(() => {
-
-    //     axiosInstance.get(`/movie/popular?page=${page}`).then((res) => {
-    //         // console.log((res.data.results))
-    //         setmovie(res.data.results)
-
-    //     }).catch((err) => {
-    //         console.log(err);
-    //     })
-
-    // }, [page])
-
+   
 
     const myMovies = useSelector((state) => state.movies.movies)
     const dispatchMovies = useDispatch()
@@ -70,7 +55,7 @@ const Movies = () => {
                         <Card.Footer>
                             <div style={{ display: "flex" }}>
                                 <div className='col-10'>    <Link variant="primary" to={`/movie/${items.id}`} style={{ textDecoration: "none" }} >Detils</Link></div>
-                                <div style={{ marginLeft: 20 }}><Link onClick={() => handlAddMovise(items)} ><i id={items.id} className={favMovies.some(item => item.id === items.id) ? 'fa-solid fa-heart' : icon}></i> </Link></div>
+                                <div style={{ marginLeft: 20 }}><Link onClick={() => handlAddMovise(items)} ><i id={items.id} className={favMovies.some(item => item.id === items.id) ? 'fa-solid fa-heart' : "fa-regular fa-heart"}></i> </Link></div>
                             </div>
                         </Card.Footer>
                     </Card>

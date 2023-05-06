@@ -8,6 +8,8 @@ import { Provider } from 'react-redux';
 import store from './store/store';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+document.title = 'Movies-Fake-API'
+
 root.render(
   <React.StrictMode>
    <BrowserRouter> 
@@ -26,5 +28,3 @@ root.render(
 reportWebVitals();
 
 
-
-//f0d0a1586bce9423f4f9625ab3ddf7d9

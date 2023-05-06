@@ -5,6 +5,6 @@ import MoviesReducer from './movieReducer';
 
 export default combineReducers({
 
-    favourites:movReducer,   //favourtmovise
-    movies:MoviesReducer   //movies
+    favourites:movReducer,   
+    movies:MoviesReducer   
 })
